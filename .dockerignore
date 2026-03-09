@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment files (do not bake secrets into image)
+.env
+.env.*
+!.env.example
+
+# Local DB / media / static build
+db.sqlite3
+media/
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests & docs
+tests/
+coverage/
+htmlcov/
+*.md
+
+# Node (if frontend present)
+node_modules/
+dist/
+build/
+
+# Docker files not needed in image
+docker-compose*.yml
