@@ -1,4 +1,5 @@
 FROM python:3.12-slim
+
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
@@ -12,6 +13,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+
+# Set a dummy DATABASE_URL so collectstatic doesn't try to load MySQL
+ENV DATABASE_URL=sqlite:///tmp/db.sqlite3
 
 RUN python manage.py collectstatic --no-input
 
