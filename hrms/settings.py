@@ -30,7 +30,9 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite
-    "http://localhost:3000",  # CRA
+    "http://localhost:3000",
+    "https://employee-attandance-frontend-5228.vercel.app"
+    # CRA
 ]
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # Application definition
